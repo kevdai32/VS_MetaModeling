@@ -1,0 +1,35 @@
+{
+  "receptor_name": "PXR",
+  "feature_groups": [
+    "total_energy"
+  ],
+  "feature_columns": [
+    "Total Energy"
+  ],
+  "rdkit_available": true,
+  "n_bootstrap_models": 100,
+  "oof_cv": 5,
+  "test_set": {
+    "n": 148,
+    "n_active": 10,
+    "n_decoy": 138,
+    "active_rate": 0.06756756756756757,
+    "brier_score": 0.05769927955196646,
+    "roc_auc": 0.8166666666666667,
+    "average_precision": 0.34383616193112765
+  },
+  "oof_full_data": {
+    "n": 589,
+    "n_active": 40,
+    "n_decoy": 549,
+    "active_rate": 0.06791171477079797,
+    "brier_score": 0.05910835403450103,
+    "roc_auc": 0.7262750455373406,
+    "average_precision": 0.25071440296362113
+  },
+  "notes": [
+    "predictions.csv p_binding is out-of-fold, not in-sample",
+    "binding_energy_error_pose is meaningful only when n_poses > 1",
+    "Bootstrap models are saved in model.joblib"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "receptor_name": "PXR_full",
+  "feature_groups": [
+    "total_energy",
+    "vdw",
+    "electrostatic",
+    "desolvation",
+    "strain",
+    "rdkit_basic"
+  ],
+  "feature_columns": [
+    "Total Energy",
+    "Van der Waals",
+    "Electrostatic",
+    "Ligand Polar Desolv",
+    "Ligand Apolar Desolv",
+    "Total Strain",
+    "Max Strain",
+    "mol_wt",
+    "logp",
+    "tpsa",
+    "hbd",
+    "hba",
+    "rot_bonds",
+    "ring_count",
+    "heavy_atoms",
+    "fraction_csp3"
+  ],
+  "rdkit_available": true,
+  "n_bootstrap_models": 100,
+  "oof_cv": 5,
+  "test_set": {
+    "n": 148,
+    "n_active": 10,
+    "n_decoy": 138,
+    "active_rate": 0.06756756756756757,
+    "brier_score": 0.05666988290186481,
+    "roc_auc": 0.8253623188405796,
+    "average_precision": 0.31380527567882244
+  },
+  "oof_full_data": {
+    "n": 589,
+    "n_active": 40,
+    "n_decoy": 549,
+    "active_rate": 0.06791171477079797,
+    "brier_score": 0.05813005311895836,
+    "roc_auc": 0.7929872495446265,
+    "average_precision": 0.25344525671664764
+  },
+  "notes": [
+    "predictions.csv p_binding is out-of-fold, not in-sample",
+    "binding_energy_error_pose is meaningful only when n_poses > 1",
+    "Bootstrap models are saved in model.joblib"
+  ]
+}

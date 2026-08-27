@@ -1,0 +1,46 @@
+{
+  "receptor_name": "PXR_octant",
+  "feature_groups": [
+    "total_energy",
+    "vdw",
+    "electrostatic",
+    "desolvation",
+    "strain",
+    "rdkit_basic"
+  ],
+  "feature_columns": [
+    "Total Energy",
+    "Van der Waals",
+    "Electrostatic",
+    "Ligand Polar Desolv",
+    "Ligand Apolar Desolv",
+    "Total Strain",
+    "Max Strain"
+  ],
+  "rdkit_available": true,
+  "n_bootstrap_models": 100,
+  "oof_cv": 5,
+  "test_set": {
+    "n": 541,
+    "n_active": 269,
+    "n_decoy": 272,
+    "active_rate": 0.49722735674676527,
+    "brier_score": 0.19770468734984184,
+    "roc_auc": 0.7627104745243823,
+    "average_precision": 0.7278669190404663
+  },
+  "oof_full_data": {
+    "n": 2162,
+    "n_active": 1074,
+    "n_decoy": 1088,
+    "active_rate": 0.4967622571692877,
+    "brier_score": 0.1923014408282237,
+    "roc_auc": 0.77441823447256,
+    "average_precision": 0.7399498057298988
+  },
+  "notes": [
+    "predictions.csv p_binding is out-of-fold, not in-sample",
+    "binding_energy_error_pose is meaningful only when n_poses > 1",
+    "Bootstrap models are saved in model.joblib"
+  ]
+}

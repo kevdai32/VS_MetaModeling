@@ -1,0 +1,14 @@
+{
+  "receptor_name": "Test",
+  "feature_groups": [
+    "total_energy"
+  ],
+  "feature_columns": [
+    "Total Energy"
+  ],
+  "test_size": 0.25,
+  "random_state": 7,
+  "calibration_cv": 3,
+  "oof_cv": 5,
+  "n_boot": 100
+}

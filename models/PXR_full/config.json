@@ -1,0 +1,34 @@
+{
+  "receptor_name": "PXR_full",
+  "feature_groups": [
+    "total_energy",
+    "vdw",
+    "electrostatic",
+    "desolvation",
+    "strain",
+    "rdkit_basic"
+  ],
+  "feature_columns": [
+    "Total Energy",
+    "Van der Waals",
+    "Electrostatic",
+    "Ligand Polar Desolv",
+    "Ligand Apolar Desolv",
+    "Total Strain",
+    "Max Strain",
+    "mol_wt",
+    "logp",
+    "tpsa",
+    "hbd",
+    "hba",
+    "rot_bonds",
+    "ring_count",
+    "heavy_atoms",
+    "fraction_csp3"
+  ],
+  "test_size": 0.25,
+  "random_state": 7,
+  "calibration_cv": 3,
+  "oof_cv": 5,
+  "n_boot": 100
+}
